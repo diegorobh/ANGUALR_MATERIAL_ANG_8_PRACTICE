@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dusoftNG';
+  notifications=2;
+  showSpinner=false;
+  opened_ = false;
+
+  loadData(){
+    this.showSpinner = true;
+    setTimeout(()=>{
+      this.showSpinner = false;
+    },5000)
+  }
+
+  consoleOpen(){
+    console.log(this.opened_);
+  }
+
 }
